@@ -29,5 +29,12 @@ module SongbookRails
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.generators do |generators|
+      generators.assets = false
+      generators.helper = false
+      generators.view_specs false
+    end
+
   end
 end
