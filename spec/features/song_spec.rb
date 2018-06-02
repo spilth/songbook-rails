@@ -4,7 +4,8 @@ feature 'Songs' do
   scenario 'Adding a Song' do
     visit root_path
 
-    click_link 'Add Song'
+    click_link 'Songs'
+    click_link 'New Song'
 
     fill_in 'Title', with: 'Example Song'
     fill_in 'Chords & Lyrics', with: '[C] [F] [C] [G]'

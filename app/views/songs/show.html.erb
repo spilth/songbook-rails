@@ -1,4 +1,13 @@
-<h1><%= @song.title %></h1>
+<div class="row">
+  <div class="col-md-8">
+    <h1><%= @song.title %></h1>
+  </div>
+  <div class="col-md-4">
+    <% if @song.spotify_uri.present? %>
+      <iframe src="https://open.spotify.com/embed?uri=<%= @song.spotify_uri %>" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <% end %>
+  </div>
+</div>
 
 <%= raw(Chordpro.html(@song.body)) %>
 

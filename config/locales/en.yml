@@ -35,3 +35,4 @@ en:
     attributes:
       song:
         body: Chords & Lyrics
+        spotify_uri: Spotify URI
