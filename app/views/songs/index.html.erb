@@ -2,8 +2,23 @@
 
 <p><%= link_to 'New Song', new_song_path, class: 'btn btn-primary' %></p>
 
-<ul>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Key</th>
+    <th>Tempo</th>
+    <th>Year</th>
+  </tr>
+  </thead>
+  <tbody>
   <% @songs.each do |song| %>
-    <li><%= link_to song.title, song %></li>
+    <tr>
+      <td><%= link_to song.title, song %></td>
+      <td><%= song.key %></td>
+      <td><%= song.tempo %></td>
+      <td><%= song.year %></td>
+    </tr>
   <% end %>
-</ul>
+  </tbody>
+</table>
