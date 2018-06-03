@@ -9,6 +9,25 @@
   </div>
 </div>
 
+<dl>
+  <% if @song.capo.present? %>
+    <dt>Capo</dt>
+    <dd><%= @song.capo %></dd>
+  <% end %>
+  <% if @song.key.present? %>
+    <dt>Key</dt>
+    <dd><%= @song.key %></dd>
+  <% end %>
+  <% if @song.tempo.present? %>
+    <dt>Tempo</dt>
+    <dd><%= @song.tempo %></dd>
+  <% end %>
+  <% if @song.year.present? %>
+    <dt>Year</dt>
+    <dd><%= @song.year %></dd>
+  <% end %>
+</dl>
+
 <%= raw(Chordpro.html(@song.body)) %>
 
 <p><%= link_to 'Edit', edit_song_path(@song), class: 'btn btn-warning' %></p>
