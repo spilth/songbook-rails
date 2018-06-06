@@ -10,6 +10,10 @@
 </div>
 
 <dl>
+  <% if @song.artist.present? %>
+    <dt>Artist</dt>
+    <dd><%= link_to @song.artist.name, @song.artist %></dd>
+  <% end %>
   <% if @song.capo.present? %>
     <dt>Capo</dt>
     <dd><%= @song.capo %></dd>
