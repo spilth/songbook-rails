@@ -8,3 +8,14 @@ $font-size-base: 1.2rem;
 tr.chords td {
   padding-top: 1rem;
 }
+
+.chordpro .chords {
+  font-weight: bold;
+}
+
+.chordpro .comment {
+  font-style: italic;
+  font-size: 0.9rem;
+  background: #ddd;
+  padding: 0.3rem;
+}

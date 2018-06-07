@@ -1,6 +1,25 @@
 <div class="row">
   <div class="col-md-8">
-    <h1><%= @song.title %></h1>
+    <h1><%= @song.title %> <small>by <%= link_to @song.artist.name, @song.artist %></small></h1>
+
+    <table class="table table-sm table-borderless">
+      <thead>
+      <tr>
+        <th>Capo</th>
+        <th>Tempo</th>
+        <th>Key</th>
+        <th>Year</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><%= @song.capo || raw('&mdash;') %></td>
+        <td><%= @song.key || raw('&mdash;') %></td>
+        <td><%= @song.tempo || raw('&mdash;') %></td>
+        <td><%= @song.year || raw('&mdash;') %></td>
+      </tr>
+      </tbody>
+    </table>
   </div>
   <div class="col-md-4">
     <% if @song.spotify_uri.present? %>
@@ -9,29 +28,9 @@
   </div>
 </div>
 
-<dl>
-  <% if @song.artist.present? %>
-    <dt>Artist</dt>
-    <dd><%= link_to @song.artist.name, @song.artist %></dd>
-  <% end %>
-  <% if @song.capo.present? %>
-    <dt>Capo</dt>
-    <dd><%= @song.capo %></dd>
-  <% end %>
-  <% if @song.key.present? %>
-    <dt>Key</dt>
-    <dd><%= @song.key %></dd>
-  <% end %>
-  <% if @song.tempo.present? %>
-    <dt>Tempo</dt>
-    <dd><%= @song.tempo %></dd>
-  <% end %>
-  <% if @song.year.present? %>
-    <dt>Year</dt>
-    <dd><%= @song.year %></dd>
-  <% end %>
-</dl>
 
-<%= raw(Chordpro.html(@song.body)) %>
+<div class="chordpro">
+  <%= raw(Chordpro.html(@song.body)) %>
+</div>
 
-<p><%= link_to 'Edit', edit_song_path(@song), class: 'btn btn-warning' %></p>
+<p class="mt-4"><%= link_to 'Edit', edit_song_path(@song), class: 'btn btn-warning' %></p>
