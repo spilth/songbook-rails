@@ -18,6 +18,6 @@ feature 'Songs' do
     click_button 'Create Song'
 
     expect(page).to have_content('Example Song')
-    expect(page).to have_content('CFCG')
+    expect(page).to have_content('C F C G ')
   end
 end
