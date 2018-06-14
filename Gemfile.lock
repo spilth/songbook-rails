@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/spilth/chordpro
+  revision: 8c0a470c02d64a0e3173362c1ec032d16ee23a6e
+  branch: divs-replaces-tables
+  specs:
+    chordpro (0.0.1)
+      builder
+      parslet
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -66,8 +75,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    chordpro (0.0.1)
-      parslet
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     diff-lcs (1.3)
@@ -211,7 +218,7 @@ DEPENDENCIES
   bootswatch
   byebug
   capybara (~> 2.15.2)
-  chordpro
+  chordpro!
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)

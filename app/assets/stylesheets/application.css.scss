@@ -19,3 +19,18 @@ tr.chords td {
   background: #ddd;
   padding: 0.3rem;
 }
+
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.chord, .lyric {
+  margin-right: 0.2em;
+  text-wrap: avoid;
+}
+
+.part {
+  margin-bottom: 0.5em;
+}
