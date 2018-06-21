@@ -5,9 +5,9 @@
   <tr>
     <th>Title</th>
     <th>Artist</th>
-    <th>Key</th>
-    <th>Tempo</th>
-    <th>Year</th>
+    <th class="d-none d-md-table-cell">Key</th>
+    <th class="d-none d-md-table-cell">Tempo</th>
+    <th class="d-none d-md-table-cell">Year</th>
   </tr>
   </thead>
   <tbody>
@@ -15,9 +15,9 @@
     <tr>
       <td><%= link_to song.title, song %></td>
       <td><%= link_to song.artist.name, song.artist %></td>
-      <td><%= song.key %></td>
-      <td><%= song.tempo %></td>
-      <td><%= song.year %></td>
+      <td class="d-none d-md-table-cell"><%= song.key %></td>
+      <td class="d-none d-md-table-cell"><%= song.tempo %></td>
+      <td class="d-none d-md-table-cell"><%= song.year %></td>
     </tr>
   <% end %>
   </tbody>

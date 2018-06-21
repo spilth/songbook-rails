@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-8">
-    <h1><%= @song.title %> <small>by <%= link_to @song.artist.name, @song.artist %></small></h1>
+    <h1><%= @song.title %></h1>
+    <h5><%= link_to @song.artist.name, @song.artist %></h5>
 
     <table class="table table-sm table-borderless">
       <thead>
