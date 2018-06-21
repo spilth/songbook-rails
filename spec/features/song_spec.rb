@@ -6,9 +6,8 @@ feature 'Songs' do
   end
 
   scenario 'Adding a Song' do
-    visit root_path
+    visit songs_path
 
-    click_link 'Songs'
     click_link 'New Song'
 
     fill_in 'Title', with: 'Example Song'

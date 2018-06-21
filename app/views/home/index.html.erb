@@ -1,1 +1,24 @@
-<h1>Songbook</h1>
+<h1>Songs</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Key</th>
+    <th>Tempo</th>
+    <th>Year</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @songs.each do |song| %>
+    <tr>
+      <td><%= link_to song.title, song %></td>
+      <td><%= link_to song.artist.name, song.artist %></td>
+      <td><%= song.key %></td>
+      <td><%= song.tempo %></td>
+      <td><%= song.year %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
