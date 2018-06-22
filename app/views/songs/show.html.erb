@@ -24,16 +24,15 @@
       </tbody>
     </table>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 d-print-none">
     <% if @song.spotify_uri.present? %>
       <iframe src="https://open.spotify.com/embed?uri=<%= @song.spotify_uri %>" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     <% end %>
   </div>
 </div>
 
-
 <div class="chordpro">
   <%= raw(Chordpro.html(@song.body)) %>
 </div>
 
-<p class="mt-4"><%= link_to 'Edit', edit_song_path(@song), class: 'btn btn-warning' %></p>
+<p class="mt-4"><%= link_to 'Edit', edit_song_path(@song), class: 'btn btn-warning d-print-none' %></p>
