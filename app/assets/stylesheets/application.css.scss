@@ -13,7 +13,6 @@ $font-size-base: 1.2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  padding-top: 1.5rem;
 }
 
 .chord, .lyric {
@@ -24,9 +23,12 @@ $font-size-base: 1.2rem;
 
 .chord {
   font-weight: bold;
+  margin-bottom: -0.2em;
 }
 
 .lyric {
   // Force the chords above an empty lyrics section to the top
   min-height: 1.5em;
+  font-family: "Times New Roman";
+  font-size: 1.4rem;
 }

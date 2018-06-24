@@ -1,7 +1,6 @@
 GIT
   remote: https://github.com/spilth/chordpro
-  revision: 8c0a470c02d64a0e3173362c1ec032d16ee23a6e
-  branch: divs-replaces-tables
+  revision: eaf7b87eabe9db3f52269d6ca09579a414336a9f
   specs:
     chordpro (0.0.1)
       builder
