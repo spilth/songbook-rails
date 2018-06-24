@@ -4,13 +4,14 @@
   <div class="col-md-8">
     <h1><%= @song.title %></h1>
     <h5><%= link_to @song.artist.name, @song.artist %></h5>
-
+  </div>
+  <div class="col-md-4">
     <table class="table table-sm table-borderless">
       <thead>
       <tr>
         <th>Capo</th>
-        <th>Tempo</th>
         <th>Key</th>
+        <th>Tempo</th>
         <th>Year</th>
       </tr>
       </thead>
@@ -24,6 +25,13 @@
       </tbody>
     </table>
   </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <div class="chordpro">
+      <%= raw(Chordpro.html(@song.body)) %>
+    </div>
+  </div>
   <div class="col-md-4 d-print-none">
     <% if @song.spotify_uri.present? %>
       <iframe src="https://open.spotify.com/embed?uri=<%= @song.spotify_uri %>" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -31,8 +39,9 @@
   </div>
 </div>
 
-<div class="chordpro">
-  <%= raw(Chordpro.html(@song.body)) %>
-</div>
+
+
+
+
 
 <p class="mt-4"><%= link_to 'Edit', edit_song_path(@song), class: 'btn btn-warning d-print-none' %></p>
