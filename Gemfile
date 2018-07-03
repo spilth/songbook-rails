@@ -14,6 +14,7 @@ gem 'chordpro', git: 'https://github.com/spilth/chordpro'
 gem 'bootstrap'
 gem 'bootswatch'
 gem 'jquery-rails'
+gem 'bundler-audit'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
@@ -21,7 +22,6 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  gem 'bundler-audit'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.7'
 end
