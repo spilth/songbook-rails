@@ -8,6 +8,7 @@ class SongsController < ApplicationController
 
   # GET /songs/1
   def show
+    @songpro = SongPro.parse(@song.body)
   end
 
   # GET /songs/new
